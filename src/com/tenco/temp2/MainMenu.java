@@ -40,6 +40,7 @@ public class MainMenu {
 				continue;
 			}
 		}
+			sc.close();
 	}
 
 }
