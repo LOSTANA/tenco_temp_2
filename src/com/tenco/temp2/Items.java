@@ -2,21 +2,6 @@ package com.tenco.temp2;
 
 public class Items {
 
-	public void useItem(int pickNum) {
-		if (pickNum == 1) {
-			usePotion();
-			return;
-		} else if (pickNum == 2) {
-			equipRevolver();
-			return;
-		} else if (pickNum == 3) {
-			equipHolster();
-			return;
-		} else if (pickNum == 4) {
-			equipArmor();
-		}
-
-	}
 
 	public void showInfo() {
 		System.out.println("======== 아이템 목록 ========");
@@ -31,8 +16,22 @@ public class Items {
 		hp += 15;
 	}
 
-	public void equipRevolver() {
+	public void equipRevolver1() {
+		power += 5;
+	}
+	
+	public void equipRevolver2() {
 		power += 10;
+	}
+	
+	public void equipPistol1() {
+		power += 3;
+		speed += 5;
+	}
+	
+	public void equipPistol2() {
+		power += 7;
+		speed += 10;
 	}
 
 	public void equipHolster() {
