@@ -6,7 +6,8 @@ public class Items {
 	public void showInfo() {
 		System.out.println("======== 아이템 목록 ========");
 		System.out.println("포션");
-		System.out.println("리볼버");
+		System.out.println("리볼버1, 리볼버2");
+		System.out.println("권총1, 권총2");
 		System.out.println("총집");
 		System.out.println("방탄복");
 		System.out.println("=============================");
