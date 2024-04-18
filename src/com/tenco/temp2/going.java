@@ -8,8 +8,11 @@ public class going {
 	String name;
 	int gun;
 	Random rd = new Random();
+	int a = 0;
 	
 	Scanner sc = new Scanner(System.in);
+	
+	Event ev = new Event();
 	int choose;
 
 	public void start() {
@@ -17,7 +20,7 @@ public class going {
 		System.out.println("캐릭터를 정해주세요");
 		choose = sc.nextInt();
 		if (choose == 1) {
-
+			
 		} else if (choose == 2) {
 
 		} else {
@@ -47,13 +50,19 @@ public class going {
 	}
 	
 	public void event() {
-		System.out.println("현재 다음과 발생하는 이벤트는 다음과 같습니다");
-		System.out.println();
-		System.out.println("확률성에 의해 다음과 아이템을 장착 중입니다 : " + );
-	}
-	
-	public int event(int gun) {
 		
+		a = rd.nextInt(100);
+		System.out.println("==========================================");
+		System.out.println("현재 다음과 발생하는 이벤트는 다음과 같습니다");
+		if(a>50)
+			ev.Normal();
+		else if(a>=50 || a < 35)
+			ev.Windstorm();
+		else if(a>=30 || a < 15 )
+			ev.Rainstorm();
+		else
+			ev.Thunderbolt();
+		System.out.println("확률성에 의해 다음과 아이템을 장착 중입니다 : ");
 	}
 
 }

@@ -29,19 +29,18 @@ public class Event {
 	public void Normal() {
 		System.out.println("날씨가 맑습니다.");
 	}
-	public void Rainstorm (int rain) {
+	public void Rainstorm () {
 		System.out.println("비가 크게 내립니다.");
-		misfire;
+
 	}
 
-	public void Windstorm (int wind) {
+	public void Windstorm () {
 		System.out.println("바람이 심하게 붑니다.");
-		Accuracy;
+
 	}
 
-	public void Thunderbolt (int thunderbolt) {
+	public void Thunderbolt () {
 		System.out.println("번개가 몰아칩니다.");
-		stun;
 	}
 
 }
