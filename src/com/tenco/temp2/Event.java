@@ -19,23 +19,16 @@ public class Event {
 		return thunderbolt;
 	}
 
-	// 기능
-	public void Normal() {
-		System.out.println("날씨가 맑습니다.");
-	}
-
-	public void setThunderbolt(int thunderbolt) {
-		this.thunderbolt = thunderbolt;
-	}
 
 	public int getNormal() {
 		return normal;
 	}
 
-	public void setNormal(int normal) {
-		this.normal = normal;
-	}
 
+	// 기능
+	public void Normal() {
+		System.out.println("날씨가 맑습니다.");
+	}
 	public void Rainstorm (int rain) {
 		System.out.println("비가 크게 내립니다.");
 		misfire;
