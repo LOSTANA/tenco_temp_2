@@ -11,7 +11,7 @@ public class Person2 {
 
 	// 스탯
 	public Person2() {
-		name;
+		name = "p2";
 		hp = 100;
 		ap = 20;
 		sp = 3;
