@@ -11,16 +11,8 @@ public class Event {
 		return rain;
 	}
 
-	public void setRain(int rain) {
-		this.rain = rain;
-	}
-
 	public int getWind() {
 		return wind;
-	}
-
-	public void setWind(int wind) {
-		this.wind = wind;
 	}
 
 	public int getThunderbolt() {
