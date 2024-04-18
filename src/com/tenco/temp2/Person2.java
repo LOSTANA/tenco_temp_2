@@ -10,53 +10,46 @@ public class Person2 {
 	private int sp; // 방어력
 
 	// 스탯
-	public Person2(String name) {
-		this.name = name;
+	public Person2() {
+		name;
 		hp = 100;
 		ap = 20;
 		sp = 3;
 		speed = 30;
 	}
+	
 
 	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	
+	public void setName(int a) {
+		this.name = "p2";
 	}
 
+	
 	public int getHp() {
 		return hp;
 	}
 
-	public void setHp(int hp) {
-		this.hp = hp;
-	}
+	
 
 	public int getAp() {
 		return ap;
 	}
 
-	public void setAp(int ap) {
-		this.ap = ap;
-	}
-
+	
 	public int getSp() {
 		return sp;
 	}
 
-	public void setSp(int sp) {
-		this.sp = sp;
-	}
+	
 
 	public int getSpeed() {
 		return speed;
 	}
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
+	
 
 	// 공격
 	public void attackPerson1(Person1 p1) {
