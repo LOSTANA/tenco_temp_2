@@ -2,20 +2,19 @@ package com.tenco.temp2;
 
 public class Person2 {
 
-	// 체력 속도 방어력 공격력
 	private String name;
 	private int hp;
-	private int speed;
 	private int ap; // 공격력
 	private int sp; // 방어력
+	private int speed;
 
 	// 스탯
 	public Person2(String name) {
 		this.name = name;
 		hp = 100;
-		ap = 20;
-		sp = 3;
-		speed = 30;
+		ap = 10;
+		sp = 30;
+		speed = 3;
 	}
 
 	public String getName() {
@@ -75,11 +74,23 @@ public class Person2 {
 		hp = hp + sp - ap;
 	}
 
+	// 이벤트 발생
+	// 공격력 감소(0) 비 
+	
+	
+	// 방어력 감소 벼락-
+	
+	// 스피드 감소 바람+
+	
+	
+	
+	
+
 	public void showInfo() {
 		System.out.println("====== 상태창 =======");
 		System.out.println("이름 : " + this.name);
 		System.out.println("체력 : " + this.hp);
-		System.out.println("공격력 : " + this.ap); 
+		System.out.println("공격력 : " + this.ap);
 		System.out.println("방어력 : " + this.sp);
 		System.out.println("스피드 : " + this.speed);
 		System.out.println("===================");
