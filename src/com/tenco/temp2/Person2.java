@@ -11,11 +11,6 @@ public class Person2 {
 	private int attack; // 공격력
 	private int chance = 2;
 	private int result = 0;
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
 
 	Random rd = new Random();
 
@@ -89,11 +84,9 @@ public class Person2 {
 
 	// 공격을 받다.
 	public void beAttackPerson(int ap) {
-<<<<<<< HEAD
-		if (this.hp <= 0) {
-=======
+
 		if (hp <= 0) {
->>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
+
 			System.err.println("P2가 사망하였습니다");
 			hp = 0;
 			return;
@@ -108,11 +101,8 @@ public class Person2 {
 			return;
 		} else {
 			System.out.println("포션을 마시고 15hp를 회복합니다");
-<<<<<<< HEAD
 			item.usePotionP2(null);
-=======
-			item.usePotionP2(this.Person2);
->>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
+
 			chance--;
 		}
 	}

@@ -7,11 +7,12 @@ public class MainMenu {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		Person1 p1 = new Person1();
-		Person2 p2 = new Person2();
+
 
 		int p1hp;
 		int p2hp;
+		String p1name;
+		String p2name;
 
 		going go = new going();
 
@@ -26,13 +27,23 @@ public class MainMenu {
 			menu = sc.nextInt();
 
 			if (menu == 1) {
-				go.start();
-
+				System.out.println("캐릭터를 정해주세요");
+				System.out.println("1. p1\t 2. p2");
+				Person1 p1 = new Person1("p1");
+				Person2 p2 = new Person2("p2");
+				int choose = sc.nextInt();
+				if (choose == 1) {
+					p2.setName("computer");
+				} else if (choose == 2) {
+					p1.setName("computer");
+				} else {
+					System.out.println("잘못된 입력입니다! 시작화면으로 되돌아갑니다");
+					return;
+				}
 				while (true) {
-					p1hp = p1.getHp();
-					p2hp = p2.getHp();
-					System.out.println(p1hp);
-					if (p1hp <= 0 && p2hp <= 0) {
+
+					System.out.println(p1.getHp());
+					if (p1.getHp() <= 0 && p2.getHp() <= 0) {
 						System.out.println("게임을 종료합니다");
 						break;
 					} else {
@@ -49,11 +60,9 @@ public class MainMenu {
 				continue;
 			}
 		}
-<<<<<<< HEAD
+
 		sc.close();
-=======
-			sc.close();
->>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
+
 	}
 
 }
