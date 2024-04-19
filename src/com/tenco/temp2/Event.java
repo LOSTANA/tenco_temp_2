@@ -62,4 +62,5 @@ public class Event {
 		// 난수로 방어력이 까진다 난수
 	}
 
+	
 }
