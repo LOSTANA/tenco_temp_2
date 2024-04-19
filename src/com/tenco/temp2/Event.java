@@ -29,18 +29,28 @@ public class Event {
 	public void Normal() {
 		System.out.println("날씨가 맑습니다.");
 	}
-	public void Rainstorm () {
-		System.out.println("비가 크게 내립니다.");
-
+	
+	public void Rainstorm1 (Person1 person) {
+		System.out.println(" 비가 크게 내려 ");
+	}
+	public void Rainstorm2 (Person2 person) {
+		System.out.println(" 비가 크게 내려 ");
 	}
 
-	public void Windstorm () {
-		System.out.println("바람이 심하게 붑니다.");
-
+	public void Windstorm1 (Person1 person) {
+		System.out.println("바람이 p1에게 유리하게 붑니다.");
+		person.setSpeed(4);
+	}
+	
+	public void Windstorm2 (Person2 person) {
+		System.out.println("바람이 p2에게 유리하게 붑니다.");
+		person.setSpeed(4);
 	}
 
-	public void Thunderbolt () {
+	public void Thunderbolt1 (Person1 person) {
 		System.out.println("번개가 몰아칩니다.");
 	}
-
+	public void Thunderbolt2 (Person2 person) {
+		System.out.println("번개가 몰아칩니다.");
+	}
 }
