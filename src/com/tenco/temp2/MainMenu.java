@@ -49,7 +49,11 @@ public class MainMenu {
 				continue;
 			}
 		}
+<<<<<<< HEAD
 		sc.close();
+=======
+			sc.close();
+>>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
 	}
 
 }

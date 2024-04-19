@@ -11,8 +11,12 @@ public class Person1 {
 	private int attack; // 공격력
 	private int chance = 2;
 	private int result = 0;
+<<<<<<< HEAD
 	
 	
+=======
+
+>>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
 	Random rd = new Random();
 
 	// 스탯
@@ -27,7 +31,11 @@ public class Person1 {
 	public Person1(String name) {
 		this.name = name;
 		hp = 100;
+<<<<<<< HEAD
 		speed = rd.nextInt(3);
+=======
+		speed = 3;
+>>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
 		defense = 10;
 		attack = 20;
 	}
@@ -85,7 +93,11 @@ public class Person1 {
 
 	// 공격을 받다.
 	public void beAttackPerson(int ap) {
+<<<<<<< HEAD
 		if (this.hp <= 0) {
+=======
+		if (hp <= 0) {
+>>>>>>> 581efb33ba9e5da951183dc172c2d65c0125de46
 			System.err.println("P1이 사망하였습니다");
 			hp = 0;
 			return;
