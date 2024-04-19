@@ -1,92 +1,110 @@
 package com.tenco.temp2;
 
+import java.util.Random;
+
 public class Person2 {
 
 	private String name;
-	private int hp;
-	private int ap; // 공격력
-	private int sp; // 방어력
-	private int speed;
+	private int hp; // 체력
+	private int speed; // 속도
+	private int defense; // 방어력
+	private int attack; // 공격력
+	private int chance = 2;
+	private int result = 0;
+
+	Random rd = new Random();
 
 	// 스탯
+	
 	public Person2() {
-		name = "p2";
+		name = "";
 		hp = 100;
-		ap = 10;
-		sp = 30;
 		speed = 3;
+		defense = 10;
+		attack = 20;
 	}
 	
+	public Person2(String name) {
+		this.name = name;
+		hp = 100;
+		speed = 3;
+		defense = 10;
+		attack = 20;
+	}
 
 	public String getName() {
 		return name;
 	}
-	
-	public void setName(int a) {
+
+	public void setName(String name) {
 		this.name = "p2";
 	}
 
-	
 	public int getHp() {
 		return hp;
 	}
 
-	
-
-	public int getAp() {
-		return ap;
+	public void setHp(int hp) {
+		this.hp = hp;
 	}
-
-	
-	public int getSp() {
-		return sp;
-	}
-
-	
 
 	public int getSpeed() {
 		return speed;
 	}
 
-	
-
-	// 공격
-	public void attackPerson1(Person1 p1) {
-		System.out.println(this.name + " 이 " + p1.getName() + " 을 공격합니다.");
-		p1.beAttacked(int ap);
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
-	// 공격 당하기
-	public void beAttacked(int ap) {
-		// 방어적 코드
+	public int getDefense() {
+		return defense;
+	}
+
+	public void setDefense(int defense) {
+		this.defense = defense;
+	}
+
+	public int getAttack() {
+		return attack;
+	}
+
+	public void setAttack(int power) {
+		this.attack = power;
+	}
+
+	//////
+
+	// 공격을 하다
+	public void attackPerson(Person1 person) {
+		
+		result = defense - rd.nextInt(10);
+		System.out.println(" 공격(" + (this.attack - result) + ") 합니다");
+		person.beAttackPerson(this.attack - result); // 호출
+	}
+
+	// 공격을 받다.
+	public void beAttackPerson(int ap) {
+
 		if (hp <= 0) {
-			System.out.println("[" + this.name + "] 이미 사망하였습니다. ");
+
+			System.err.println("P2가 사망하였습니다");
 			hp = 0;
 			return;
 		}
-		hp = hp + sp - ap;
+		hp -= ap;
+
 	}
 
-	// 이벤트 발생
-	// 공격력 감소(0) 비 
-	
-	
-	// 방어력 감소 벼락-
-	
-	// 스피드 감소 바람+
-	
-	
-	
-	
+	public void healingPerson(Items item) {
+		if (chance <= 0) {
+			System.out.println("포션이 없어 회복이 불가합니다");
+			return;
+		} else {
+			System.out.println("포션을 마시고 15hp를 회복합니다");
+			item.usePotionP2(null);
 
-	public void showInfo() {
-		System.out.println("====== 상태창 =======");
-		System.out.println("이름 : " + this.name);
-		System.out.println("체력 : " + this.hp);
-		System.out.println("공격력 : " + this.ap);
-		System.out.println("방어력 : " + this.sp);
-		System.out.println("스피드 : " + this.speed);
-		System.out.println("===================");
+			chance--;
+		}
 	}
 
 }
